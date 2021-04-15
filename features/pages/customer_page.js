@@ -2,32 +2,34 @@ const { browser } = require("protractor");
 
 var CustomersPage = function() {
 
-  var business = element.all(by.css('.ui-autocomplete-input'));
-  var searchButton = element(by.css('.flat-blue-btn'));
+  const business = element.all(by.css('.ui-autocomplete-input')).get(2);
+  const location = element.all(by.css('.ui-autocomplete-input')).get(3);
+  const searchButton = element(by.css('.flat-blue-btn'));
   this.get = async function() {
     await browser.waitForAngularEnabled(false)
     await browser.get('https://www.mytime.com/consumers');
   };
 
-  this.business = async function(value) {
+  this.fillBusiness = async function(value) {
     try {
-      await business.get(2).sendKeys("haircut");
+      await business.sendKeys(value);
     } catch (error) {
       throw error
     }
     
   };
 
-  this.location = async function(value) {
+  this.fillLocation = async function(value) {
     try {
-      await business.get(3).sendKeys("San Francisco California");
+      await location.clear();
+      await location.sendKeys(value);
     } catch (error) {
       throw error
     }
     
   };
 
-  this.searchButton = async function() {
+  this.clickSearchButton = async function() {
     try {
       await searchButton.click();
     } catch (error) {

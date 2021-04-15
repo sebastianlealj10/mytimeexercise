@@ -10,5 +10,8 @@ exports.config = {
   cucumberOpts: {
     require: 'features/steps/*_steps.js',
     format: 'pretty'
+  },
+  onPrepare: function () {
+    browser.manage().window().maximize(); // maximize the browser before executing the feature files
   }
 }

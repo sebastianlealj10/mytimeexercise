@@ -7,9 +7,9 @@ var CustomerSteps = function() {
   });
 
   this.When('I search for $service in $location', async  function (service, location) {
-    await CustomersPage.business(service);
-    await CustomersPage.location(location);
-    await CustomersPage.searchButton();
+    await CustomersPage.fillBusiness(service);
+    await CustomersPage.fillLocation(location);
+    await CustomersPage.clickSearchButton();
   });
 }
 module.exports = CustomerSteps;
