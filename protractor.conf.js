@@ -3,9 +3,9 @@ exports.config = {
 
   framework: 'custom',
   frameworkPath: require.resolve('protractor-cucumber-framework'),
-
+  allScriptsTimeout: 10000,
   specs: [
-    'features/*.feature'
+    'features/bookService.feature'
   ],
   cucumberOpts: {
     require: 'features/steps/*_steps.js',
