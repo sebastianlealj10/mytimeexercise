@@ -25,6 +25,7 @@ var SearchPage = function() {
         servicePresent = index;
       }
     }
+    await browser.wait(EC.presenceOf(searchResults.get(servicePresent)), 5000);
     await searchResults.get(servicePresent).click();
   };
 }

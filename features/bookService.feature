@@ -10,3 +10,4 @@ Feature: The users can book a service and check all the information related to t
      When I select Test - Sabre Cuts
      And I pick All Services and Master Yoda
      And I book Men's Haircut and select time
+     Then There are more than two times available and the service info matches
