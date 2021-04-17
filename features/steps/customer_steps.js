@@ -1,15 +1,13 @@
-var chai = require('chai').use(require('chai-as-promised'));
-var expect = chai.expect;
-var CustomersPage = require("../pages/customer_page.js");
+import CustomersPage from "../pages/customer_page.js";
 var CustomerSteps = function() {
-  this.Given('I go to MyTime custorms page', async function () {
+  this.Given('I go to MyTime custorms page', async () => {
     await CustomersPage.get();
   });
 
-  this.When('I search for $service in $location', async  function (service, location) {
+  this.When('I search for $service in $location', async  (service, location) => {
     await CustomersPage.fillBusiness(service);
     await CustomersPage.fillLocation(location);
     await CustomersPage.clickSearchButton();
   });
 }
-module.exports = CustomerSteps;
+export default CustomerSteps;

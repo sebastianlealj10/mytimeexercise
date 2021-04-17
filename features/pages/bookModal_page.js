@@ -1,14 +1,18 @@
-const { browser } = require("protractor");
+'use strict';
 
-var BookModalPage = function() {
+import { browser } from "protractor";
 
-  const selectTimeButton = $('button[data-automation*="addonModal.selectTime"]');
-  var EC = protractor.ExpectedConditions;
-  
-  this.selectTime = async function() {
-    await browser.wait(EC.presenceOf(selectTimeButton), 5000);
-    await selectTimeButton.click();
-  };
-  
+class BookModalPage {
+  constructor() {
+
+    const TimeButton = $('button[data-automation*="addonModal.selectTime"]');
+    var EC = protractor.ExpectedConditions;
+
+    this.chooseTime = async () => {
+      await browser.wait(EC.presenceOf(TimeButton), 5000);
+      await TimeButton.click();
+    };
+
+  }
 }
-module.exports = new BookModalPage();
+export default new BookModalPage();

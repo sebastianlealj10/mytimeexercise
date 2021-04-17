@@ -12,6 +12,7 @@ exports.config = {
     format: 'pretty'
   },
   onPrepare: function () {
+    require("@babel/register");
     browser.manage().window().maximize(); // maximize the browser before executing the feature files
   }
 }
