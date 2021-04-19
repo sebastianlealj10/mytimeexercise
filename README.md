@@ -1,7 +1,7 @@
 ### Technology stack
 
 ## Compiler
-Babel, Typescrip should be used too but it is kind of overkill for this small project
+Babel, Typescript should be used too but it is kind of overkill for this small project
 
 ## Design Patterns
 POO
