@@ -5,7 +5,7 @@ exports.config = {
   frameworkPath: require.resolve('protractor-cucumber-framework'),
   allScriptsTimeout: 10000,
   specs: [
-    'features/bookService.feature'
+    'features/*.feature'
   ],
   SELENIUM_PROMISE_MANAGER: false,
   cucumberOpts: {

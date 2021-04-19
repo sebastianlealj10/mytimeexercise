@@ -8,7 +8,7 @@ var SearchSteps = function() {
   });
 
   this.Then('I get $firstresult, $secondresult and $thirdresult', async (firstresult, secondresult, thirdresult) => {
-    resultsList = await SearchPage.getResults();
+    const resultsList = await SearchPage.getResults();
     expect(resultsList).to.include.members([firstresult, secondresult, thirdresult]);
   });
 }
