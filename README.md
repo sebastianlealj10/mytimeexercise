@@ -7,9 +7,9 @@ Babel, Typescrip should be used too but it is kind of overkill for this small pr
 POO
 
 ## Syntaxis
-Gherkin
-ES06 for imports
-ES05 for classes structure
+* Gherkin
+* ES06 for imports
+* ES05 for classes structure
 
 ### Steps to run the tests
 
