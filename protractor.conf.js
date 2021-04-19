@@ -7,6 +7,7 @@ exports.config = {
   specs: [
     'features/bookService.feature'
   ],
+  SELENIUM_PROMISE_MANAGER: false,
   cucumberOpts: {
     require: 'features/steps/*_steps.js',
     format: 'pretty'
@@ -14,5 +15,5 @@ exports.config = {
   onPrepare: function () {
     require("@babel/register");
     browser.manage().window().maximize(); // maximize the browser before executing the feature files
-  }
+  },
 }

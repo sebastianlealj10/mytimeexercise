@@ -1,5 +1,4 @@
 'use strict';
-
 import { browser } from "protractor";
 
 class PickTimePage {
