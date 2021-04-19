@@ -3,7 +3,7 @@
 ## Compiler
 Babel, Typescrip should be used too but it is kind of overkill for this small project
 
-## Design Patternd
+## Design Patterns
 POO
 
 ## Syntaxis
